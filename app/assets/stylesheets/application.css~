@@ -36,7 +36,7 @@
 }
 
 #columns {
-  background: #160;
+  background: #170;
 
   #main {
     margin-left: 17em;
