@@ -11,22 +11,6 @@ test "product attributes must not be empty" do
   assert product.errors[:image_url].any?
 end
 
-test "product price must be positive" do
-  product = products(:one)
-
-  product.price = -1
-  assert product.invalid?
-  assert product.errors[:price].any?
-
-  product.price = 0
-  assert product.invalid?
-  assert product.errors[:price].any?
-
-  product.price = 1
-  assert product.valid?
-  assert product.errors[:price].none?
-end
-
 test "image url must point to an image file" do
   product = products(:one)
   ok = %w{ frog.gif frog.jpg frog.png FROG.PNG fRoG.PnG

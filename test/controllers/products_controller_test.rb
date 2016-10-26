@@ -5,13 +5,13 @@ class ProductsControllerTest < ActionController::TestCase
     @product = products(:one)
     @update = {
 
-      :title       => 'Lorem Ipsum',
+      :title       => 'Some Title',
 
-      :description => 'Wibbles are fun!',
+      :description => 'Some description',
 
-      :image_url   => 'lorem.jpg',
+      :image_url   => 'some.jpg',
 
-      :price       => 19.95
+      :price       => 9.95
 
     }
   end

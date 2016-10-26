@@ -1,0 +1,6 @@
+class LineItem < ActiveRecord::Base
+  include CurrentCart
+  before_action :set_cart, only: [:create]
+  belongs_to :product
+  belongs_to :cart
+end
