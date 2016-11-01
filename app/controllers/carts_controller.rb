@@ -62,6 +62,11 @@ class CartsController < ApplicationController
   end
 
   private
+    #RecordNotFound error
+    def invalid_cart
+      logger.error "Attempt to access invalid cart #{params[:id]}"
+      redirect_to store_url, notice: 'Invalid cart'
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
       @cart = Cart.find(params[:id])
